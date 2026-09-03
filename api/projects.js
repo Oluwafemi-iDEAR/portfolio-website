@@ -20,7 +20,13 @@ export default async function handler(req, res) {
 
   if (!githubConfigured() || !kvConfigured()) {
     // Backend not set up yet — tell the frontend to use its public fallback.
-    return res.status(200).json({ configured: false, items: [] });
+    // `detail` exposes only booleans (never secret values) so env-var setup
+    // can be diagnosed from the browser.
+    return res.status(200).json({
+      configured: false,
+      items: [],
+      detail: { github: githubConfigured(), kv: kvConfigured() }
+    });
   }
 
   try {
