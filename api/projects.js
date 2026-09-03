@@ -1,7 +1,7 @@
 // GET /api/projects  (public)
 // Returns the enabled projects for the showcase carousel, in the order the
 // dashboard set. Uses the server-side GitHub token so PRIVATE repos can be
-// included — but only ever returns sanitized metadata (never code, never the
+// included - but only ever returns sanitized metadata (never code, never the
 // token). For private repos, no code link is exposed and the "view" target is
 // the landing page, or the contact page when there is no landing page.
 import {
@@ -19,7 +19,7 @@ export default async function handler(req, res) {
   }
 
   if (!githubConfigured() || !kvConfigured()) {
-    // Backend not set up yet — tell the frontend to use its public fallback.
+    // Backend not set up yet - tell the frontend to use its public fallback.
     // `detail` exposes only booleans (never secret values) so env-var setup
     // can be diagnosed from the browser.
     return res.status(200).json({

@@ -477,8 +477,22 @@
     }
 
     .shot-private-inner .shot-lock {
-      font-size: 2rem;
       margin-bottom: 4px;
+      color: var(--muted);
+    }
+
+    .shot-private-inner .shot-lock .ico {
+      width: 40px;
+      height: 40px;
+    }
+
+    /* Inline SVG icons inherit text colour and align with the label. */
+    .ico {
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.14em;
+      display: inline-block;
+      flex: none;
     }
 
     .shot-private-inner strong {

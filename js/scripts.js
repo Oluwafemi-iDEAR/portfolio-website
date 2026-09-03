@@ -19,7 +19,7 @@
 
 
 /* =====================================================================
-   Project Showcase Carousel — live from GitHub
+   Project Showcase Carousel - live from GitHub
    Fetches the six most recent repositories for the configured GitHub user
    and renders each as a carousel slide with a live landing-page screenshot,
    a short description, and the tools it was built with.
@@ -46,64 +46,64 @@
   // Add descriptions/topics on GitHub to enrich cards automatically instead.
   const PROJECT_OVERRIDES = {
     'sirelab': {
-      title: 'SIRE — Sustainable Infrastructure Research',
-      badge: 'Flagship · Research Platform',
+      title: 'SIRE: Sustainable Infrastructure Research',
+      badge: 'Flagship Research Platform',
       description:
-        'SIRE is a full research-group platform I built as a fast, content-driven website. The frontend is a React + TypeScript single-page app (Vite) styled with Tailwind and animated with Framer Motion, pulling all of its content — research areas, team members, publications, events, courses and student spotlights — live from a Sanity headless CMS through TanStack Query. It ships a validated contact form (React Hook Form + Zod) backed by a serverless email endpoint, per-route SEO metadata, and Swiper-powered carousels for highlights.',
+        'SIRE is a full research-group platform I built as a fast, content-driven website. The frontend is a React and TypeScript single-page app (Vite) styled with Tailwind and animated with Framer Motion, pulling all of its content (research areas, team members, publications, events, courses and student spotlights) live from a Sanity headless CMS through TanStack Query. It ships a validated contact form (React Hook Form and Zod) backed by a serverless email endpoint, per-route SEO metadata, and Swiper-powered carousels for highlights.',
       tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Sanity CMS', 'Framer Motion']
     },
     'sirelab_studio': {
-      title: 'SIRE Studio — Headless CMS',
-      badge: 'Content Backend · Sanity',
+      title: 'SIRE Studio: Headless CMS',
+      badge: 'Content Backend',
       description:
-        'The Sanity Studio that powers the SIRE research platform — the editing environment where every piece of site content is modelled and managed. I designed the full content schema (site settings, research areas, team and students, publications, events, courses, milestones and FAQs) with a custom grouped desk structure, singletons, orderable lists and generated TypeScript types, so the frontend stays type-safe end to end.',
+        'The Sanity Studio that powers the SIRE research platform: the editing environment where every piece of site content is modelled and managed. I designed the full content schema (site settings, research areas, team and students, publications, events, courses, milestones and FAQs) with a custom grouped desk structure, singletons, orderable lists and generated TypeScript types, so the frontend stays type-safe end to end.',
       tags: ['Sanity', 'TypeScript', 'Structured Content', 'Schema Design', 'TypeGen']
     },
     'portfolio-website': {
       badge: 'Personal Site',
       description:
-        'The site you are looking at — a hand-built developer portfolio in plain HTML, CSS and JavaScript, deliberately framework-free. Its standout piece is this Project Showcase, which pulls my latest repositories straight from the GitHub API at runtime and renders each one with a live screenshot of its deployed landing page, an auto-generated tool list and description — so the portfolio keeps itself up to date without a rebuild.',
+        'The site you are looking at: a hand-built developer portfolio in plain HTML, CSS and JavaScript, deliberately framework-free. Its standout piece is this Project Showcase, which pulls my latest repositories straight from the GitHub API at runtime and renders each one with a live screenshot of its deployed landing page, an auto-generated tool list and description, so the portfolio keeps itself up to date without a rebuild.',
       tags: ['HTML', 'CSS', 'JavaScript', 'GitHub API', 'Vercel']
     },
     'sire': {
-      title: 'SIRE — Emerging Tech & Applied STEM',
+      title: 'SIRE: Emerging Tech and Applied STEM',
       badge: 'Static Research Hub',
       description:
-        'An earlier, fully static version of the SIRE research hub for an Emerging Tech & Applied STEM group, built with hand-written HTML and Tailwind CSS. It brings research fields, research highlights, upcoming events, a publications spotlight and conferences & workshops together into a clean, fast, no-build department site — the predecessor that later evolved into the CMS-driven SIRE platform.',
+        'An earlier, fully static version of the SIRE research hub for an Emerging Tech and Applied STEM group, built with hand-written HTML and Tailwind CSS. It brings research fields, research highlights, upcoming events, a publications spotlight and conferences and workshops together into a clean, fast, no-build department site, and was the predecessor that later evolved into the CMS-driven SIRE platform.',
       tags: ['HTML', 'Tailwind CSS', 'Research Hub', 'Static Site']
     },
     'smart_waste': {
       title: 'Smart Waste Management',
-      badge: 'AI + IoT · Waste Optimization',
+      badge: 'AI and IoT Waste Optimization',
       description:
-        'Smart Waste Management is a React dashboard for monitoring and optimising municipal waste collection, built as a team project. It combines Firebase authentication (login / register), a Zustand-managed application state and React Router navigation with map-based bin locations, analytics views and collection scheduling — turning live fill-level data into clear operational decisions and more efficient routes.',
+        'Smart Waste Management is a React dashboard for monitoring and optimising municipal waste collection, built as a team project. It combines Firebase authentication (login and register), a Zustand-managed application state and React Router navigation with map-based bin locations, analytics views and collection scheduling, turning live fill-level data into clear operational decisions and more efficient routes.',
       tags: ['React', 'Vite', 'Tailwind CSS', 'Firebase', 'Zustand']
     },
     'temporal-': {
       badge: 'Frontend Template',
       description:
-        'A frontend build exploring a component-driven landing-page system using Pug templating and a Tailwind CSS design theme, compiled through a Gulp / Browsersync workflow with live reload. It is a smaller experiment focused on templating structure, reusable partials and theme configuration rather than a deployed product.',
+        'A frontend build exploring a component-driven landing-page system using Pug templating and a Tailwind CSS design theme, compiled through a Gulp and Browsersync workflow with live reload. It is a smaller experiment focused on templating structure, reusable partials and theme configuration rather than a deployed product.',
       tags: ['Pug', 'Tailwind CSS', 'Gulp', 'Frontend']
     },
     'my-family-tree': {
-      title: 'Kindred — Family Tree Builder',
+      title: 'Kindred: Family Tree Builder',
       badge: 'Full-Stack App',
       description:
-        'Kindred is an interactive family-tree application for mapping and exploring relationships across generations. Built with React + TypeScript (Vite) on a Supabase backend (Postgres, authentication and SQL migrations), it renders the tree as a pannable, zoomable node graph with React Flow, manages client state with Zustand and server data with TanStack Query, and adds guided onboarding (driver.js) plus multi-language support (i18n) for a polished, production-minded experience.',
+        'Kindred is an interactive family-tree application for mapping and exploring relationships across generations. Built with React and TypeScript (Vite) on a Supabase backend (Postgres, authentication and SQL migrations), it renders the tree as a pannable, zoomable node graph with React Flow, manages client state with Zustand and server data with TanStack Query, and adds guided onboarding (driver.js) plus multi-language support (i18n) for a polished, production-minded experience.',
       tags: ['React', 'TypeScript', 'Supabase', 'React Flow', 'TanStack Query', 'Zustand']
     },
     'email_manager': {
-      title: 'Email Manager — Bulk Mail-Merge',
+      title: 'Email Manager: Bulk Mail Merge',
       badge: 'Python Tool',
       description:
-        'A self-hosted bulk mail-merge email manager built on a FastAPI backend with a lightweight web UI. It manages multiple sending accounts with SMTP auto-detection and encrypted credential storage, parses and builds recipient lists, personalises each message with mail-merge fields, supports multipart HTML / plain-text bodies with attachments, and streams progress through the send loop — designed to run reliable campaigns from your own email accounts.',
+        'A self-hosted bulk mail-merge email manager built on a FastAPI backend with a lightweight web UI. It manages multiple sending accounts with SMTP auto-detection and encrypted credential storage, parses and builds recipient lists, personalises each message with mail-merge fields, supports multipart HTML and plain-text bodies with attachments, and streams progress through the send loop, so you can run reliable campaigns from your own email accounts.',
       tags: ['Python', 'FastAPI', 'SMTP', 'Mail Merge', 'Uvicorn']
     },
     'ican-usa': {
-      title: 'ICAN-USA — Membership Platform',
+      title: 'ICAN-USA: Membership Platform',
       badge: 'Organisation Platform',
       description:
-        'A complete web presence for ICAN-USA, the USA District of the Institute of Chartered Accountants of Nigeria. It pairs a fast marketing site (membership, programs, governance, conferences and more) with a Next.js members platform featuring authentication (NextAuth), a Prisma / Postgres data layer, Sanity CMS-managed content, PayPal dues payments, transactional email (Resend) and QR-code generation for members and events — supported by a Python crawler toolkit used to migrate and model the legacy site content.',
+        'A complete web presence for ICAN-USA, the USA District of the Institute of Chartered Accountants of Nigeria. It pairs a fast marketing site (membership, programs, governance, conferences and more) with a Next.js members platform featuring authentication (NextAuth), a Prisma and Postgres data layer, Sanity CMS-managed content, PayPal dues payments, transactional email (Resend) and QR-code generation for members and events, supported by a Python crawler toolkit used to migrate and model the legacy site content.',
       tags: ['Next.js', 'TypeScript', 'Prisma', 'Sanity CMS', 'NextAuth', 'PayPal']
     }
   };
@@ -136,11 +136,11 @@
   };
 
   const formatDate = (iso) => {
-    if (!iso) return '—';
+    if (!iso) return 'Not available';
     try {
       return new Date(iso).toLocaleDateString(undefined, { month: 'short', year: 'numeric' });
     } catch (e) {
-      return '—';
+      return 'Not available';
     }
   };
 
@@ -161,10 +161,21 @@
   const ogFallback = (repo) =>
     'https://opengraph.githubassets.com/1/' + GITHUB_USER + '/' + repo;
 
+  // Inline SVG icons (inherit text colour via currentColor).
+  const ICON_LOCK =
+    '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ' +
+    'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<rect x="3" y="11" width="18" height="11" rx="2"/>' +
+    '<path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>';
+  const ICON_EXTERNAL =
+    '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ' +
+    'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>';
+
   // Shown in the preview panel for a private repo that has no landing page.
   const PRIVATE_PLACEHOLDER =
     '<div class="shot-private-inner">' +
-    '<span class="shot-lock" aria-hidden="true">&#128274;</span>' +
+    '<span class="shot-lock" aria-hidden="true">' + ICON_LOCK + '</span>' +
     '<strong>Private project</strong>' +
     '<span>Contact me to request access</span>' +
     '</div>';
@@ -190,7 +201,7 @@
         }
       }
     } catch (e) {
-      /* backend unavailable — fall through to the public GitHub fallback */
+      /* backend unavailable - fall through to the public GitHub fallback */
     }
     // 2) Public fallback.
     return fetchPublicProjects();
@@ -230,7 +241,7 @@
     try {
       localStorage.setItem(CACHE_KEY, JSON.stringify({ time: Date.now(), projects }));
     } catch (e) {
-      /* storage full or unavailable — non-fatal */
+      /* storage full or unavailable - non-fatal */
     }
   }
 
@@ -267,7 +278,7 @@
             languages = Object.keys(langMap).sort((a, b) => langMap[b] - langMap[a]);
           }
         } catch (e) {
-          /* ignore — fall back to primary language */
+          /* ignore - fall back to primary language */
         }
         const homepage = (r.homepage || '').trim();
         return {
@@ -344,17 +355,8 @@
       btn.setAttribute('aria-controls', 'slide-' + i);
       btn.id = 'tab-' + i;
       btn.dataset.slide = String(i);
-      btn.innerHTML =
-        '<small>' +
-        esc(badge) +
-        (isPrivate ? ' · Private' : '') +
-        '</small>' +
-        '<strong>' +
-        esc(title) +
-        '</strong>' +
-        '<span>' +
-        esc(description.length > 96 ? description.slice(0, 93) + '…' : description) +
-        '</span>';
+      // Tab buttons show only the title; full copy lives in the slide body.
+      btn.innerHTML = '<strong>' + esc(title) + '</strong>';
       nav.appendChild(btn);
 
       // --- slide panel ---
@@ -372,7 +374,7 @@
         actions +=
           '<a class="btn btn-primary" href="' +
           esc(live) +
-          '" target="_blank" rel="noreferrer">View Live ↗</a>';
+          '" target="_blank" rel="noreferrer">View Live ' + ICON_EXTERNAL + '</a>';
       }
       if (isPrivate && !live) {
         actions +=
@@ -408,7 +410,7 @@
         previewInner = '<div class="shot-frame shot-private">' + PRIVATE_PLACEHOLDER + '</div>';
       }
 
-      const topPillRight = live ? 'Live ↗' : isPrivate ? 'Request access ↗' : 'Repo ↗';
+      const topPillRight = live ? 'Live' : isPrivate ? 'Request access' : 'Repo';
       const topPillLeft = live ? prettyHost(live) : isPrivate ? 'Private' : 'GitHub';
 
       slide.innerHTML =
@@ -444,6 +446,8 @@
         '</span>' +
         '<span class="mock-pill">' +
         esc(topPillRight) +
+        ' ' +
+        ICON_EXTERNAL +
         '</span>' +
         '</div>' +
         previewInner +
@@ -451,7 +455,7 @@
         '</div>' +
         '<div class="metrics">' +
         '<div class="metric-card"><strong>Primary Stack</strong><span>' +
-        esc(p.language || (tags[0] || '—')) +
+        esc(p.language || (tags[0] || 'Not specified')) +
         '</span></div>' +
         '<div class="metric-card"><strong>Last Updated</strong><span>' +
         esc(formatDate(p.pushedAt)) +

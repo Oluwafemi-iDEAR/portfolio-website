@@ -6,10 +6,10 @@ import crypto from 'node:crypto';
 export const CONFIG_KEY = 'showcase:config';
 
 // Environment (set these in Vercel → Project → Settings → Environment Variables):
-//   GITHUB_TOKEN  — a GitHub token that can read your repos (see README).
-//   ADMIN_SECRET  — the password that protects the dashboard.
+//   GITHUB_TOKEN  - a GitHub token that can read your repos (see README).
+//   ADMIN_SECRET  - the password that protects the dashboard.
 //   KV_REST_API_URL / KV_REST_API_TOKEN   (added automatically by Vercel KV)
-//   — or — UPSTASH_REDIS_REST_URL / UPSTASH_REDIS_REST_TOKEN (Upstash marketplace)
+//   - or - UPSTASH_REDIS_REST_URL / UPSTASH_REDIS_REST_TOKEN (Upstash marketplace)
 const KV_URL = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL || '';
 const KV_TOKEN = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN || '';
 
