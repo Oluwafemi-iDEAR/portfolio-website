@@ -87,8 +87,10 @@ export async function gh(path) {
 let repoCache = { time: 0, repos: null };
 const REPO_CACHE_MS = 30 * 1000;
 
-export async function listOwnedRepos() {
-  if (repoCache.repos && Date.now() - repoCache.time < REPO_CACHE_MS) {
+// Pass force=true (used by the admin dashboard) to bypass the cache so a
+// just-pushed repo appears immediately instead of waiting out the TTL.
+export async function listOwnedRepos(force = false) {
+  if (!force && repoCache.repos && Date.now() - repoCache.time < REPO_CACHE_MS) {
     return repoCache.repos;
   }
   const repos = [];

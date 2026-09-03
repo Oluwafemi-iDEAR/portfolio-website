@@ -33,7 +33,7 @@ export default async function handler(req, res) {
     if (req.method === 'GET') {
       const config = await readConfig();
       const orderIndex = new Map(config.order.map((n, i) => [n.toLowerCase(), i]));
-      const repos = await listOwnedRepos();
+      const repos = await listOwnedRepos(true);
 
       const items = repos.map((r) => ({
         name: r.name,
@@ -63,7 +63,7 @@ export default async function handler(req, res) {
         return res.status(400).json({ error: 'Expected { order: [...] }' });
       }
       // Validate the submitted names against repos the owner actually has.
-      const repos = await listOwnedRepos();
+      const repos = await listOwnedRepos(true);
       const valid = new Set(repos.map((r) => r.name));
       const order = body.order.filter((n) => valid.has(n));
       const saved = await writeConfig({ order, overrides: body.overrides || {} });
