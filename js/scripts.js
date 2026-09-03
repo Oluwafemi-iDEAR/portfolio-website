@@ -84,6 +84,27 @@
       description:
         'A frontend build exploring a component-driven landing-page system using Pug templating and a Tailwind CSS design theme, compiled through a Gulp / Browsersync workflow with live reload. It is a smaller experiment focused on templating structure, reusable partials and theme configuration rather than a deployed product.',
       tags: ['Pug', 'Tailwind CSS', 'Gulp', 'Frontend']
+    },
+    'my-family-tree': {
+      title: 'Kindred — Family Tree Builder',
+      badge: 'Full-Stack App',
+      description:
+        'Kindred is an interactive family-tree application for mapping and exploring relationships across generations. Built with React + TypeScript (Vite) on a Supabase backend (Postgres, authentication and SQL migrations), it renders the tree as a pannable, zoomable node graph with React Flow, manages client state with Zustand and server data with TanStack Query, and adds guided onboarding (driver.js) plus multi-language support (i18n) for a polished, production-minded experience.',
+      tags: ['React', 'TypeScript', 'Supabase', 'React Flow', 'TanStack Query', 'Zustand']
+    },
+    'email_manager': {
+      title: 'Email Manager — Bulk Mail-Merge',
+      badge: 'Python Tool',
+      description:
+        'A self-hosted bulk mail-merge email manager built on a FastAPI backend with a lightweight web UI. It manages multiple sending accounts with SMTP auto-detection and encrypted credential storage, parses and builds recipient lists, personalises each message with mail-merge fields, supports multipart HTML / plain-text bodies with attachments, and streams progress through the send loop — designed to run reliable campaigns from your own email accounts.',
+      tags: ['Python', 'FastAPI', 'SMTP', 'Mail Merge', 'Uvicorn']
+    },
+    'ican-usa': {
+      title: 'ICAN-USA — Membership Platform',
+      badge: 'Organisation Platform',
+      description:
+        'A complete web presence for ICAN-USA, the USA District of the Institute of Chartered Accountants of Nigeria. It pairs a fast marketing site (membership, programs, governance, conferences and more) with a Next.js members platform featuring authentication (NextAuth), a Prisma / Postgres data layer, Sanity CMS-managed content, PayPal dues payments, transactional email (Resend) and QR-code generation for members and events — supported by a Python crawler toolkit used to migrate and model the legacy site content.',
+      tags: ['Next.js', 'TypeScript', 'Prisma', 'Sanity CMS', 'NextAuth', 'PayPal']
     }
   };
 
