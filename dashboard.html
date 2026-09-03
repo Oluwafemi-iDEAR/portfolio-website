@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Showcase Dashboard | Oluwafemi S. Ifesanmi</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Oluwafemi S. Ifesanmi home">
+        <span class="brand-mark">
+          <img src="img/myPlogo.png" alt="Oluwafemi Ifesanmi Logo" />
+        </span>
+        <span class="brand-name">Showcase Dashboard</span>
+      </a>
+      <a class="nav-cta" href="projects.html">View Projects Page</a>
+    </div>
+  </header>
+
+  <main class="container dashboard">
+    <!-- Login gate -->
+    <section id="gate" class="dash-card gate">
+      <h1>Showcase Dashboard</h1>
+      <p>Enter your admin password to manage which projects appear in the showcase carousel.</p>
+      <form id="gate-form" class="gate-form">
+        <label for="password" class="visually-hidden">Admin password</label>
+        <input id="password" type="password" placeholder="Admin password" autocomplete="current-password" />
+        <button class="btn btn-primary" type="submit">Unlock</button>
+      </form>
+      <p id="gate-error" class="gate-error" role="alert" hidden></p>
+    </section>
+
+    <!-- Dashboard (hidden until unlocked) -->
+    <section id="board" class="board" hidden>
+      <div class="board-head">
+        <div>
+          <h1>Projects</h1>
+          <p class="board-sub">
+            Toggle a project on to show it in the carousel. Drag order with the arrows —
+            the top-most enabled project appears first. Private repos link to their landing
+            page, or to your contact page if none is set.
+          </p>
+        </div>
+        <div class="board-actions">
+          <span id="save-status" class="save-status" aria-live="polite"></span>
+          <button id="refresh-btn" class="btn btn-secondary" type="button">Refresh</button>
+          <button id="save-btn" class="btn btn-primary" type="button">Save changes</button>
+        </div>
+      </div>
+
+      <div class="board-legend">
+        <span id="count-enabled" class="legend-pill">0 shown</span>
+        <span id="count-total" class="legend-pill legend-muted">0 repos</span>
+      </div>
+
+      <ul id="repo-list" class="repo-list"></ul>
+    </section>
+  </main>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

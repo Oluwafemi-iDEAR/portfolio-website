@@ -885,209 +885,30 @@
             <div>
               <h2>Project Showcase Carousel</h2>
               <p>
-                A sleek carousel to move through featured work. Each project combines a high-level summary with a visual concept panel so the page feels like a developer portfolio, not a static résumé dump.
+                A sleek carousel to move through featured work — pulled <strong>live from my GitHub</strong>. It always shows my six most recent projects, each with a screenshot of its live landing page, a short description, and the tools it was built with.
               </p>
             </div>
           </div>
 
-          <div class="carousel-wrap">
-            <div class="carousel-nav" role="tablist" aria-label="Project carousel navigation">
-              <button class="carousel-btn active" data-slide="0" role="tab" aria-selected="true" aria-controls="slide-0" id="tab-0">
-                <small>Product UI</small>
-                <strong>Derech Journey Planner</strong>
-                <span>Multi-stop planning, navigation states, and live route changes</span>
-              </button>
-
-              <button class="carousel-btn" data-slide="1" role="tab" aria-selected="false" aria-controls="slide-1" id="tab-1">
-                <small>Distributed Systems</small>
-                <strong>Federated HPC for Collaborative AI</strong>
-                <span>SLURM-based cluster setup, testing, and performance evaluation</span>
-              </button>
-
-              <button class="carousel-btn" data-slide="2" role="tab" aria-selected="false" aria-controls="slide-2" id="tab-2">
-                <small>Applied AI</small>
-                <strong>Smart Waste Optimization</strong>
-                <span>IoT sensing, prediction, and route optimization concepts</span>
-              </button>
+          <div class="carousel-wrap" id="showcase-carousel" data-github-user="Oluwafemi-iDEAR">
+            <div class="carousel-nav" id="carousel-nav" role="tablist" aria-label="Project carousel navigation">
+              <div class="carousel-skeleton"></div>
+              <div class="carousel-skeleton"></div>
+              <div class="carousel-skeleton"></div>
             </div>
 
-            <div class="carousel-panel">
-              <article class="slide active" id="slide-0" role="tabpanel" aria-labelledby="tab-0">
-                <div class="slide-hero">
-                  <div>
-                    <span class="project-badge">Flagship Frontend Product</span>
-                    <h3>Derech Journey Planner</h3>
-                    <p>
-                      Derech is a multi-stop journey planner and navigation MVP built around the idea that navigation should support the whole journey, not just a single destination. It is designed like a modern map product with route portfolio selection, bottom-sheet interactions, stop management, and live re-planning of remaining legs.
-                    </p>
-                    <div class="stack-row" style="margin-top:16px;">
-                      <span class="stack-chip">React</span>
-                      <span class="stack-chip">TypeScript</span>
-                      <span class="stack-chip">Next.js</span>
-                      <span class="stack-chip">Map-first UI</span>
-                      <span class="stack-chip">State-heavy product flow</span>
-                    </div>
-                  </div>
-
-                  <div class="mock-surface" aria-label="Derech interface mockup">
-                    <div class="mock-topbar">
-                      <span class="mock-pill">Route Portfolio</span>
-                      <span class="mock-pill">3 options</span>
-                    </div>
-                    <div class="mock-map">
-                      <div class="route-line"></div>
-                      <div class="route-line-2"></div>
-                      <div class="route-line-3"></div>
-                      <div class="route-line-4"></div>
-                      <span class="marker one">S</span>
-                      <span class="marker two">1</span>
-                      <span class="marker three">2</span>
-                      <span class="marker four">F</span>
-                    </div>
-                    <div class="mock-sheet">
-                      <strong>Fastest • 42 min • 19.4 mi</strong>
-                      <span>Start → Walmart → Ross → Home • Traffic stable</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="metrics">
-                  <div class="metric-card">
-                    <strong>UX Focus</strong>
-                    <span>Multi-state journey flow with clear route decisions</span>
-                  </div>
-                  <div class="metric-card">
-                    <strong>Architecture</strong>
-                    <span>Mock API orchestration, app state transitions, and route simulation</span>
-                  </div>
-                  <div class="metric-card">
-                    <strong>Strength Shown</strong>
-                    <span>Frontend engineering with product and systems thinking</span>
-                  </div>
-                </div>
-              </article>
-
-              <article class="slide" id="slide-1" role="tabpanel" aria-labelledby="tab-1">
-                <div class="slide-hero">
-                  <div>
-                    <span class="project-badge">HPC Systems Engineering</span>
-                    <h3>Federated HPC for Collaborative AI</h3>
-                    <p>
-                      This project focuses on building a federated high-performance computing environment for collaborative AI workloads. My work includes deploying and validating a SLURM-based cluster, testing controller and node services, benchmarking workload behavior, and documenting the setup for research and peer learning.
-                    </p>
-                    <div class="stack-row" style="margin-top:16px;">
-                      <span class="stack-chip">SLURM</span>
-                      <span class="stack-chip">Linux / Ubuntu</span>
-                      <span class="stack-chip">Distributed Nodes</span>
-                      <span class="stack-chip">Scheduling</span>
-                      <span class="stack-chip">Benchmarking</span>
-                    </div>
-                  </div>
-
-                  <div class="mock-surface" aria-label="HPC systems concept panel">
-                    <div class="mock-topbar">
-                      <span class="mock-pill">Cluster Status</span>
-                      <span class="mock-pill">4 nodes online</span>
-                    </div>
-                    <div class="mock-map" style="display:grid; place-items:center; background:linear-gradient(135deg, rgba(60,135,255,0.1), rgba(121,239,200,0.08));">
-                      <div style="width:100%; max-width:290px; display:grid; gap:12px;">
-                        <div style="padding:12px 14px; border-radius:16px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.08); text-align:center; font-weight:700;">slurmctld</div>
-                        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:12px;">
-                          <div style="padding:12px; border-radius:16px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08); text-align:center;">node-01</div>
-                          <div style="padding:12px; border-radius:16px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08); text-align:center;">node-02</div>
-                          <div style="padding:12px; border-radius:16px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08); text-align:center;">node-03</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mock-sheet">
-                      <strong>Job queue healthy</strong>
-                      <span>Controller and daemon communication validated across cluster nodes</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="metrics">
-                  <div class="metric-card">
-                    <strong>Infrastructure</strong>
-                    <span>End-to-end cluster configuration and service validation</span>
-                  </div>
-                  <div class="metric-card">
-                    <strong>Operations</strong>
-                    <span>Job scheduling, prioritization, and workload testing</span>
-                  </div>
-                  <div class="metric-card">
-                    <strong>Strength Shown</strong>
-                    <span>Real systems work with documentation and troubleshooting discipline</span>
-                  </div>
-                </div>
-              </article>
-
-              <article class="slide" id="slide-2" role="tabpanel" aria-labelledby="tab-2">
-                <div class="slide-hero">
-                  <div>
-                    <span class="project-badge">AI + IoT Workflow</span>
-                    <h3>Smart Waste Monitoring & Collection Optimization</h3>
-                    <p>
-                      This project combines IoT sensing, predictive modeling, and route optimization to improve waste collection efficiency. It is built around real-time fill-level detection, intelligent trend forecasting, and operational decision-making informed by data.
-                    </p>
-                    <div class="stack-row" style="margin-top:16px;">
-                      <span class="stack-chip">Python</span>
-                      <span class="stack-chip">IoT Sensors</span>
-                      <span class="stack-chip">Raspberry Pi</span>
-                      <span class="stack-chip">LSTM</span>
-                      <span class="stack-chip">Reinforcement Learning</span>
-                    </div>
-                  </div>
-
-                  <div class="mock-surface" aria-label="Smart waste system concept panel">
-                    <div class="mock-topbar">
-                      <span class="mock-pill">Live Feed</span>
-                      <span class="mock-pill">Bin level 82%</span>
-                    </div>
-                    <div class="mock-map" style="padding:18px; display:grid; gap:12px;">
-                      <div style="height:18px; border-radius:999px; background:rgba(255,255,255,0.07); overflow:hidden; border:1px solid rgba(255,255,255,0.08);">
-                        <div style="width:82%; height:100%; background:linear-gradient(90deg, var(--warning), var(--danger));"></div>
-                      </div>
-                      <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
-                        <div style="padding:14px; border-radius:16px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08);">
-                          <strong style="display:block; margin-bottom:6px;">Predicted Trend</strong>
-                          <span style="color:var(--muted); font-size:0.85rem;">Collection needed in 4 hrs</span>
-                        </div>
-                        <div style="padding:14px; border-radius:16px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08);">
-                          <strong style="display:block; margin-bottom:6px;">Route Signal</strong>
-                          <span style="color:var(--muted); font-size:0.85rem;">Priority bin added to route</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mock-sheet">
-                      <strong>Optimization-ready</strong>
-                      <span>Sensor data, prediction, and routing logic working together as one system</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="metrics">
-                  <div class="metric-card">
-                    <strong>Sensing</strong>
-                    <span>Real-time data capture through embedded hardware and sensors</span>
-                  </div>
-                  <div class="metric-card">
-                    <strong>Intelligence</strong>
-                    <span>Prediction and optimization layered on operational data</span>
-                  </div>
-                  <div class="metric-card">
-                    <strong>Strength Shown</strong>
-                    <span>Applied AI thinking tied to practical workflow improvement</span>
-                  </div>
-                </div>
-              </article>
+            <div class="carousel-panel" id="carousel-panel">
+              <div class="carousel-status" id="carousel-status" role="status" aria-live="polite">
+                <span class="carousel-spinner" aria-hidden="true"></span>
+                Loading my latest projects from GitHub…
+              </div>
             </div>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="section" id="deep-dive">
+    <!-- <section class="section" id="deep-dive">
       <div class="container">
         <article class="section-card">
           <div class="section-heading">
@@ -1169,7 +990,7 @@
           </div>
         </article>
       </div>
-    </section>
+    </section> -->
 
     <section class="section" id="process">
       <div class="container">

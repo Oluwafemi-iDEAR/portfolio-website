@@ -1,0 +1,10 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Developer portfolio with a live, GitHub-driven project showcase and admin dashboard.",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  }
+}
